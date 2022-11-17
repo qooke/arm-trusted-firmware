@@ -68,4 +68,9 @@ void pwr_sys_init(void)
 	mmio_clrsetbits_32(GPC_GLOBAL_BASE + PMIC_STBY_ACK_CTRL,
 			   PMIC_STBY_OFF_DELAY_MASK,
 			   PMIC_STBY_OFF_DELAY(PMIC_STBY_OFF_DELAY_1_5MS));
+
+	/* enable S401 clock gating LP handshake */
+	mmio_setbits_32(BLK_CTRL_S_BASE + HW_LP_HANDHSK, BIT(24) | BIT(23));
+	mmio_setbits_32(LPCG(3) + 0x10, BIT(13) | BIT(12));
+	mmio_setbits_32(LPCG(3) + 0x30, BIT(2));
 }
