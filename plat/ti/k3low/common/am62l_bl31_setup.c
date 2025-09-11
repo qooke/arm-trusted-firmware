@@ -6,6 +6,7 @@
  */
 
 #include <common/debug.h>
+#include <ti_clk_handler.h>
 #include <ti_sci.h>
 #include <ti_sci_protocol.h>
 #include <ti_sci_transport.h>
@@ -13,6 +14,7 @@
 #include <board_def.h>
 #include <firewall.h>
 #include <plat_private.h>
+#include <ti_plat_scmi_def.h>
 
 /* Table of regions to map using the MMU */
 const mmap_region_t plat_k3_mmap[] = {
@@ -33,6 +35,8 @@ int ti_soc_init(void)
 	int ret;
 
 	generic_delay_timer_init();
+
+	ti_init_scmi_server();
 
 	ret = ti_sci_boot_notification();
 	if (ret != 0) {
