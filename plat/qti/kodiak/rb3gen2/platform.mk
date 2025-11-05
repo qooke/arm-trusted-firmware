@@ -81,9 +81,16 @@ BL2_SOURCES		+=	drivers/io/io_fip.c					\
 				$(PLAT_PATH)/common/src/qti_image_desc.c		\
 				$(PLAT_PATH)/common/src/qti_io_storage.c
 
+# Switch on QTI SMMU driver support
+# This stops Lemans and other QTI platforms that don't support the SMMU driver from failing to build
+ENABLE_QTI_SMMU := 1
+$(eval $(call add_define,ENABLE_QTI_SMMU))
+
 include drivers/arm/gic/v3/gicv3.mk
 BL31_SOURCES		+=	drivers/delay_timer/generic_delay_timer.c		\
 				drivers/delay_timer/delay_timer.c			\
+				drivers/qti/smmu/$(CHIPSET)/smmu_cfg.c			\
+				drivers/qti/smmu/smmu.c					\
 				plat/common/plat_gicv3.c				\
 				${GICV3_SOURCES}					\
 				plat/common/plat_psci_common.c				\
