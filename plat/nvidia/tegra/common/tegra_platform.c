@@ -82,13 +82,6 @@ static uint32_t tegra_get_chipid_pre_si_platform(void)
 	return (tegra_get_chipid() >> PRE_SI_PLATFORM_SHIFT) & PRE_SI_PLATFORM_MASK;
 }
 
-bool tegra_chipid_is_t186(void)
-{
-	uint32_t chip_id = (tegra_get_chipid() >> CHIP_ID_SHIFT) & CHIP_ID_MASK;
-
-	return (chip_id == TEGRA_CHIPID_TEGRA18);
-}
-
 bool tegra_chipid_is_t194(void)
 {
 	uint32_t chip_id = (tegra_get_chipid() >> CHIP_ID_SHIFT) & CHIP_ID_MASK;
