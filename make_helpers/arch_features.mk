@@ -146,7 +146,7 @@ endif
 
 # Set all FEAT_* in FEAT_LIST to '1' if they are not yet defined or set
 # from build commandline options or platform makefile.
-$(eval $(call default_ones, ${sort ${FEAT_LIST}}))
+$(eval $(call set_ones, ${sort ${FEAT_LIST}}))
 
 #
 ################################################################################
