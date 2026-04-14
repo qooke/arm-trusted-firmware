@@ -97,6 +97,7 @@ $(eval $(call add_defines, \
 	TARGET_PLATFORM \
 	TARGET_FLAVOUR_$(call uppercase,${TARGET_FLAVOUR}) \
 	TC_RESOLUTION_$(call uppercase,${TC_RESOLUTION}) \
+	TC_TARGET_DISTRO_$(call uppercase,${TC_TARGET_DISTRO}) \
 	TC_DPU_USE_SCMI_CLK \
 	TC_SCMI_PD_CTRL_EN \
 	TC_FPGA_FS_IMG_IN_RAM \
