@@ -150,6 +150,7 @@ BL1_SOURCES		+=	${INTERCONNECT_SOURCES}	\
 				${TC_CPU_SOURCES}	\
 				${TC_BASE}/tc_trusted_boot.c	\
 				${TC_BASE}/tc_bl1_setup.c \
+				${TC_BASE}/tc_security.c	\
 				${TC_BASE}/tc_err.c	\
 				drivers/arm/sbsa/sbsa.c
 
@@ -165,6 +166,7 @@ BL31_SOURCES		+=	${INTERCONNECT_SOURCES}	\
 				${TC_CPU_SOURCES}	\
 				${TC_BASE}/tc_bl31_setup.c	\
 				${TC_BASE}/tc_topology.c	\
+				${TC_BASE}/tc_security.c	\
 				lib/fconf/fconf.c			\
 				lib/fconf/fconf_dyn_cfg_getter.c	\
 				drivers/arm/dsu/dsu.c			\

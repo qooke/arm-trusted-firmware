@@ -436,6 +436,10 @@
 
 #define PLATFORM_CORE_COUNT		(PLAT_MAX_CPUS_PER_CLUSTER * PLAT_ARM_CLUSTER_COUNT)
 
+#define PLAT_NUM_PWR_DOMAINS		(ARM_SYSTEM_COUNT + \
+					 PLAT_ARM_CLUSTER_COUNT + \
+					 PLATFORM_CORE_COUNT)
+
 /* The number of nodes in the SFCP system. This must be kept
  * up to date with the value in other nodes
  */
@@ -455,7 +459,7 @@
 #endif
 
 #define CSS_SYSTEM_PWR_DMN_LVL		ARM_PWR_LVL2
-#define PLAT_MAX_PWR_LVL		ARM_PWR_LVL1
+#define PLAT_MAX_PWR_LVL		ARM_PWR_LVL2
 
 /*
  * Physical and virtual address space limits for MMU in AARCH64
