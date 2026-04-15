@@ -65,6 +65,10 @@ TC_RESOLUTION_OPTIONS		:= 	640x480p60 \
 # Set default to the 640x480p60 resolution mode
 TC_RESOLUTION ?= $(firstword $(TC_RESOLUTION_OPTIONS))
 
+# Set the default value for little core existing (nevis in tc4)
+TC_CPU_TOPOLOGY_6MID_2BIG  := 0
+
+
 # Check resolution option for FVP
 ifneq ($(filter ${TARGET_FLAVOUR}, fvp),)
 ifeq ($(filter ${TC_RESOLUTION}, ${TC_RESOLUTION_OPTIONS}),)
@@ -84,6 +88,17 @@ ifeq ($(filter ${TARGET_FLAVOUR}, fvp fpga),)
         $(error TARGET_FLAVOUR must be fvp or fpga)
 endif
 
+ifeq ($(TC_CPU_TOPOLOGY_6MID_2BIG), 1)
+ifneq (${TARGET_FLAVOUR}, fpga)
+	$(error TC_CPU_TOPOLOGY_6MID_2BIG can only be 1 in FPGAs)
+endif
+
+ifneq (${TARGET_PLATFORM}, 4)
+	$(error TC_CPU_TOPOLOGY_6MID_2BIG can only be 1 in TC4)
+endif
+endif
+
+
 # Support for loading FS Image to DRAM
 TC_FPGA_FS_IMG_IN_RAM := 0
 
@@ -98,6 +113,7 @@ $(eval $(call add_defines, \
 	TARGET_FLAVOUR_$(call uppercase,${TARGET_FLAVOUR}) \
 	TC_RESOLUTION_$(call uppercase,${TC_RESOLUTION}) \
 	TC_TARGET_DISTRO_$(call uppercase,${TC_TARGET_DISTRO}) \
+	TC_CPU_TOPOLOGY_6MID_2BIG 	\
 	TC_DPU_USE_SCMI_CLK \
 	TC_SCMI_PD_CTRL_EN \
 	TC_FPGA_FS_IMG_IN_RAM \
