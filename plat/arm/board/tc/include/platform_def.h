@@ -245,6 +245,10 @@
 #define V2M_FLASH0_BASE			UL(0x0C000000)
 #endif
 #define V2M_FLASH0_SIZE			UL(0x02000000)
+#define QSPI_CONTROLLER_BASE_ADDR	0xe000000
+#define QSPI_CONTROLLER_SIZE		0x1000
+#define SCC_BASE_ADDR			0x7ff90000
+#define SCC_SIZE			0x1000
 #endif
 
 // TC_MAP_DEVICE covers different peripherals
@@ -500,11 +504,6 @@
 #define PLAT_ARM_FIP_OFFSET_IN_GPT		0x6000
 #endif /* ARM_GPT_SUPPORT */
 
-/* UART related constants */
-
-#define TC_UART0			0x2a400000
-#define TC_UART1			0x2a410000
-
 /*
  * TODO: if any more undefs are needed, it's better to consider dropping the
  * board_css_def.h include above
@@ -519,20 +518,16 @@
 #undef  ARM_CONSOLE_BAUDRATE
 #define ARM_CONSOLE_BAUDRATE		38400
 
+#define TC_UART1			0x2a410000
+
 #if TARGET_PLATFORM == 3
 #define TC_UARTCLK			3750000
 #elif TARGET_PLATFORM == 4
 #define TC_UARTCLK			4000000
 #endif /* TARGET_PLATFORM == 3 */
 
-
-#if TARGET_FLAVOUR_FVP
 #define PLAT_ARM_BOOT_UART_BASE		TC_UART1
-#else /* TARGET_FLAVOUR_FPGA */
-#define PLAT_ARM_BOOT_UART_BASE		TC_UART0
-#endif /* TARGET_FLAVOUR_FPGA */
-
-#define PLAT_ARM_RUN_UART_BASE		TC_UART0
+#define PLAT_ARM_RUN_UART_BASE		PLAT_ARM_BOOT_UART_BASE
 #define PLAT_ARM_CRASH_UART_BASE	PLAT_ARM_RUN_UART_BASE
 
 #define PLAT_ARM_BOOT_UART_CLK_IN_HZ	TC_UARTCLK
