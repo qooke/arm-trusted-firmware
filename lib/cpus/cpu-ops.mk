@@ -543,9 +543,33 @@ CPU_FLAG_LIST += ERRATA_N1_2743102
 # applies to all revisions <= r4p1 of the Neoverse N1 cpu and is still open.
 CPU_FLAG_LIST += ERRATA_N1_3324349
 
+# Flag to apply erratum 1542436 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1542436
+
+# Flag to apply erratum 1618634 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1618634
+
 # Flag to apply erratum 1618635 workaround during reset. This erratum applies
 # to revision r0p0 of the Neoverse V1 cpu and was fixed in the revision r1p0.
 CPU_FLAG_LIST += ERRATA_V1_1618635
+
+# Flag to apply erratum 1618636 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1618636
+
+# Flag to apply erratum 1619807 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1619807
+
+# Flag to apply erratum 1654562 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1654562
+
+# Flag to apply erratum 1674403 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_V1_1674403
 
 # Flag to apply erratum 1774420 workaround during reset. This erratum applies
 # to revisions r0p0 and r1p0 of the Neoverse V1 core, and was fixed in r1p1.
@@ -612,6 +636,10 @@ CPU_FLAG_LIST += ERRATA_V1_2743233
 # applies to revisions r0p0, r1p0, r1p1 and r1p2  of the Neoverse V1 cpu and is
 # still open.
 CPU_FLAG_LIST += ERRATA_V1_2779461
+
+# Flag to apply erratum 3888016 workaround during reset. This erratum applies to
+# revisions r0p0, r1p0, r1p1, r1p2 of the Neoverse V1 cpu and is still open.
+CPU_FLAG_LIST += ERRATA_V1_3888016
 
 # Flag to apply erratum 2970647 workaround during reset. This erratum applies
 # to revisions r0p0 of the Neoverse V3 cpu and is fixed in r0p1.
