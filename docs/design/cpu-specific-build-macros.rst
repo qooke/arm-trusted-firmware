@@ -1262,6 +1262,26 @@ For Cortex-A520, the following errata build flags are defined :
 
 For Cortex-A715, the following errata build flags are defined :
 
+- ``ERRATA_A715_2238661``: This applies erratum 2238661 workaround to
+   Cortex-A715 CPU. This needs to be enabled for revision r0p0 of the CPU. It is
+   fixed in r1p0.
+
+- ``ERRATA_A715_2239006``: This applies erratum 2239006 workaround to
+   Cortex-A715 CPU. This needs to be enabled for revision r0p0 of the CPU. It is
+   fixed in r1p0.
+
+- ``ERRATA_A715_2275754``: This applies erratum 2275754 workaround to
+   Cortex-A715 CPU. This needs to be enabled for revision r0p0 of the CPU. It is
+   fixed in r1p0.
+
+- ``ERRATA_A715_2284544``: This applies erratum 2284544 workaround to
+   Cortex-A715 CPU. This needs to be enabled for revision r0p0 of the CPU. It is
+   fixed in r1p0.
+
+- ``ERRATA_A715_2292761``: This applies erratum 2292761 workaround to
+   Cortex-A715 CPU. This needs to be enabled for revision r0p0 of the CPU. It is
+   fixed in r1p0.
+
 -  ``ERRATA_A715_2331818``: This applies errata 2331818 workaround to
    Cortex-A715 CPU. This needs to be enabled for revisions r0p0 and r1p0.
    It is fixed in r1p1.
