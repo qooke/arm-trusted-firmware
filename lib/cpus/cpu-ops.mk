@@ -524,6 +524,10 @@ CPU_FLAG_LIST += ERRATA_X1_1688305
 # to revisions r0p0 - r1p0 of the X1 cpu and fixed in r1p1.
 CPU_FLAG_LIST += ERRATA_X1_1827429
 
+# Flag to apply erratum 925373 workaround during reset. This erratum applies to
+# revision r0p0 of the Neoverse N1 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_N1_925373
+
 # Flag to apply T32 CLREX workaround during reset. This erratum applies
 # only to r0p0 and r1p0 of the Neoverse N1 cpu.
 CPU_FLAG_LIST += ERRATA_N1_1043202
@@ -572,6 +576,11 @@ CPU_FLAG_LIST += ERRATA_N1_1315703
 # to revisions r3p0 - r4p0 of the Neoverse N1 cpu.
 CPU_FLAG_LIST += ERRATA_N1_1542419
 
+# Flag to apply erratum 1791580 workaround during reset. This erratum applies to
+# revisions r0p0, r1p0, r2p0, r3p0, r3p1, r4p0 of the Neoverse N1 cpu and is fixed
+# in r4p1.
+CPU_FLAG_LIST += ERRATA_N1_1791580
+
 # Flag to apply erratum 1868343 workaround during reset. This erratum applies
 # to revision <= r4p0 of the Neoverse N1 cpu.
 CPU_FLAG_LIST += ERRATA_N1_1868343
@@ -588,6 +597,11 @@ CPU_FLAG_LIST += ERRATA_N1_2743102
 # Flag to apply erratum 3324349 workaround during reset. This erratum
 # applies to all revisions <= r4p1 of the Neoverse N1 cpu and is still open.
 CPU_FLAG_LIST += ERRATA_N1_3324349
+
+# Flag to apply erratum 3888013 workaround during reset. This erratum applies to
+# revisions r0p0, r1p0, r2p0, r3p0, r3p1, r4p0, r4p1 of the Neoverse N1 cpu and is
+# still open.
+CPU_FLAG_LIST += ERRATA_N1_3888013
 
 # Flag to apply erratum 1542436 workaround during reset. This erratum applies to
 # revision r0p0 of the Neoverse V1 cpu and is fixed in r1p0.
