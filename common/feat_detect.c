@@ -32,7 +32,7 @@ check_feature(int state, unsigned long field, const char *feat_name,
 		return true;
 	}
 	if (state >= FEAT_STATE_ALWAYS && field > max) {
-		ERROR("FEAT_%s is version %ld, but is only known up to version %d\n",
+		ERROR("FEAT_%s is version %lu, but is only known up to version %u\n",
 		      feat_name, field, max);
 		return true;
 	}
