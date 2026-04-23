@@ -337,9 +337,33 @@ CPU_FLAG_LIST += ERRATA_A76AE_2753838
 # revisions r0p0, r1p0, r1p1 of the Cortex-A76AE cpu and is still open.
 CPU_FLAG_LIST += ERRATA_A76AE_3888014
 
+# Flag to apply erratum 1160841 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A77 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_A77_1160841
+
+# Flag to apply erratum 1204882 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A77 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_A77_1204882
+
+# Flag to apply erratum 1220737 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A77 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_A77_1220737
+
+# Flag to apply erratum 1253791 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A77 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_A77_1253791
+
+# Flag to apply erratum 1273521 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A77 cpu and is fixed in r1p0.
+CPU_FLAG_LIST += ERRATA_A77_1273521
+
 # Flag to apply erratum 1508412 workaround during reset. This erratum applies
 # only to revision <= r1p0 of the Cortex A77 cpu.
 CPU_FLAG_LIST += ERRATA_A77_1508412
+
+# Flag to apply erratum 1515815 workaround during reset. This erratum applies to
+# revisions r0p0, r1p0 of the Cortex-A77 cpu and is fixed in r1p1.
+CPU_FLAG_LIST += ERRATA_A77_1515815
 
 # Flag to apply erratum 1925769 workaround during reset. This erratum applies
 # only to revision <= r1p1 of the Cortex A77 cpu.
@@ -364,6 +388,10 @@ CPU_FLAG_LIST += ERRATA_A77_1800714
 # Flag to apply erratum 2743100 workaround during power down. This erratum
 # applies to revisions r0p0, r1p0, and r1p1, it is still open.
 CPU_FLAG_LIST += ERRATA_A77_2743100
+
+# Flag to apply erratum 3888015 workaround during reset. This erratum applies to
+# revisions r0p0, r1p0, r1p1 of the Cortex-A77 cpu and is still open.
+CPU_FLAG_LIST += ERRATA_A77_3888015
 
 # Flag to apply erratum 1467580 workaround during reset. This erratum applies to
 # revision r0p0 of the Cortex-A78 cpu and is fixed in r1p0.
