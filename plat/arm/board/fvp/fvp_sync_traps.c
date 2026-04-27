@@ -19,12 +19,12 @@
  * hardware instructions might not be useful or even possible.
  */
 #if ENABLE_FEAT_RNG_TRAP
-int plat_handle_rng_trap(uint8_t rt, bool rndrrs, cpu_context_t *ctx)
+int plat_handle_rng_trap(u_register_t *data, bool rndrrs)
 {
 	if (rndrrs) {
-		ctx->gpregs_ctx.ctx_regs[rt] = read_rndrrs();
+		*data = read_rndrrs();
 	} else {
-		ctx->gpregs_ctx.ctx_regs[rt] = read_rndr();
+		*data = read_rndr();
 	}
 
 	return TRAP_RET_CONTINUE;
