@@ -1556,6 +1556,10 @@ CPU_FLAG_LIST += ERRATA_A510_3704847
 # to revisions r0p0, r0p1 of the Cortex-A520 cpu and is still open.
 CPU_FLAG_LIST += ERRATA_A520_2630792
 
+# Flag to apply erratum 2677201 workaround during reset. This erratum applies to
+# revision r0p0 of the Cortex-A520 cpu and is fixed in r0p1.
+CPU_FLAG_LIST += ERRATA_A520_2677201
+
 # Flag to apply erratum 2858100 workaround during reset. This erratum
 # applies to revision r0p0 and r0p1 of the Cortex-A520 cpu and is still open.
 CPU_FLAG_LIST += ERRATA_A520_2858100
@@ -1563,6 +1567,14 @@ CPU_FLAG_LIST += ERRATA_A520_2858100
 # Flag to apply erratum 2938996 workaround during reset. This erratum
 # applies to revision r0p0 and r0p1 of the Cortex-A520 cpu and is fixed in r0p2.
 CPU_FLAG_LIST += ERRATA_A520_2938996
+
+# Flag to apply erratum 3631357 workaround during reset. This erratum applies to
+# revisions r0p0, r0p1, r0p2, r0p3, r0p4 of the Cortex-A520 cpu and is still open.
+CPU_FLAG_LIST += ERRATA_A520_3631357
+
+# Flag to apply erratum 3685825 workaround during reset. This erratum applies to
+# revisions r0p0, r0p1, r0p2, r0p3, r0p4 of the Cortex-A520 cpu and is still open.
+CPU_FLAG_LIST += ERRATA_A520_3685825
 
 # Flag to apply erratum 2618597 workaround during reset. This erratum applies
 # to revisions r0p0 and r0p1. It is fixed in r0p2.
